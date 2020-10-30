@@ -15,8 +15,31 @@ Resources:
         - AWSLambdaBasicExecutionRole
       Environment:
         Variables:
-          SAMPLE_VALUE: 
-            Ref: SampleValue
+          TWITTER_ACCESS_TOKEN:
+            Ref: TWITTER_ACCESS_TOKEN
+          TWITTER_ACCESS_TOKEN_SECRET: 
+            Ref: TWITTER_ACCESS_TOKEN_SECRET
 Parameters:
-  SampleValue:
+  TWITTER_ACCESS_TOKEN:
     Type: String
+  TWITTER_ACCESS_TOKEN_SECRET:
+    Type: String
+
+
+
+
+#     Environment:
+#         Variables:
+#           TWITTER_API_KEY:
+#             Ref: TwitterApiKey
+#           TWITTER_API_KEY_SECRET:
+#             Ref: TwitterApiKeySecret
+#           BEARER_TOKEN: 
+#             Ref: BearerToken
+# Parameters:
+#   TwitterApiKey:
+#     Type: String
+#   TwitterApiKeySecret:
+#     Type: String
+#   BearerToken:
+#     Type: String
