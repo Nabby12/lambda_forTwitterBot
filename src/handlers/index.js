@@ -13,7 +13,7 @@ const twitter_client = new twitter({
 });
 
 exports.handler = () => {
-    const postContent = 'test投稿'
+    const postContent = 'testPost'
     const params = { status: postContent };
 
     twitter_client.post('statuses/update', params, (error, tweet) => {
@@ -22,6 +22,20 @@ exports.handler = () => {
             return
         } else {
             console.log('投稿に成功しました。');
+
+            const replyContent = 'testReply'
+            const replyParams = { 
+                status: replyContent, 
+                in_reply_to_status_id: tweet.id_str
+            };
+            twitter_client.post('statuses/update', replyParams, (error, tweet) => {
+                if(error) {
+                    console.log(error);
+                    return
+                } else {
+                    console.log('スレッド投稿に成功しました。');
+                }
+            });
         }
     });
 }
