@@ -1,6 +1,12 @@
-const TWITTER_API_KEY = process.env['TWITTER_API_KEY'];
-const TWITTER_API_KEY_SECRET = process.env['TWITTER_API_KEY_SECRET'];
-const BEARER_TOKEN = process.env['BEARER_TOKEN'];
+
+const twitter = require('twitter');
+
+const twitter_client = new twitter({
+    consumer_key        : process.env['API_KEY'],
+    consumer_secret     : process.env['API_KEY_SECRET'],
+    access_token_key    : process.env['ACCESS_TOKEN'],
+    access_token_secret : process.env['ACCESS_TOKEN_SECRET'],
+});
 
 exports.handler = async () => {
     // If you change this message, you will need to change hello-from-lambda.test.js

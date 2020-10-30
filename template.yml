@@ -15,14 +15,22 @@ Resources:
         - AWSLambdaBasicExecutionRole
       Environment:
         Variables:
-          TWITTER_ACCESS_TOKEN:
-            Ref: TWITTER_ACCESS_TOKEN
-          TWITTER_ACCESS_TOKEN_SECRET: 
-            Ref: TWITTER_ACCESS_TOKEN_SECRET
+          API_KEY:
+            Ref: API_KEY
+          API_KEY_SECRET: 
+            Ref: API_KEY_SECRET
+          ACCESS_TOKEN:
+            Ref: ACCESS_TOKEN
+          ACCESS_TOKEN_SECRET: 
+            Ref: ACCESS_TOKEN_SECRET
 Parameters:
-  TWITTER_ACCESS_TOKEN:
+  API_KEY:
     Type: String
-  TWITTER_ACCESS_TOKEN_SECRET:
+  API_KEY_SECRET:
+    Type: String
+  ACCESS_TOKEN:
+    Type: String
+  ACCESS_TOKEN_SECRET:
     Type: String
 
 
