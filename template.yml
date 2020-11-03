@@ -23,6 +23,8 @@ Resources:
             Ref: ACCESS_TOKEN
           ACCESS_TOKEN_SECRET: 
             Ref: ACCESS_TOKEN_SECRET
+          DYNAMO_TABLE_NAME: 
+            Ref: DynamoTableName
 Parameters:
   API_KEY:
     Type: String
@@ -31,4 +33,6 @@ Parameters:
   ACCESS_TOKEN:
     Type: String
   ACCESS_TOKEN_SECRET:
+    Type: String
+  DynamoTableName:
     Type: String
