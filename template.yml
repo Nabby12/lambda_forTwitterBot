@@ -16,23 +16,23 @@ Resources:
       Environment:
         Variables:
           API_KEY:
-            Ref: API_KEY
+            Ref: ApiKey
           API_KEY_SECRET: 
-            Ref: API_KEY_SECRET
+            Ref: ApiKeySecret
           ACCESS_TOKEN:
-            Ref: ACCESS_TOKEN
+            Ref: AccessToken
           ACCESS_TOKEN_SECRET: 
-            Ref: ACCESS_TOKEN_SECRET
+            Ref: AccessTokenSecret
           DYNAMO_TABLE_NAME: 
             Ref: DynamoTableName
 Parameters:
-  API_KEY:
+  ApiKey:
     Type: String
-  API_KEY_SECRET:
+  ApiKeySecret:
     Type: String
-  ACCESS_TOKEN:
+  AccessToken:
     Type: String
-  ACCESS_TOKEN_SECRET:
+  AccessTokenSecret:
     Type: String
   DynamoTableName:
     Type: String
