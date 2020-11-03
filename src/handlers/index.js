@@ -45,7 +45,7 @@ exports.handler = async () => {
 
 async function getContents () {
     let records = await getUnPostFlagRecords();
-    if (records.Items.length === 0) {
+    if (records.Count === 0) {
         records = await initRecords(records.ScannedCount);
     };
 
