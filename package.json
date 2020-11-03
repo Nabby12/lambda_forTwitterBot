@@ -4,6 +4,7 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "aws-sdk": "^2.784.0",
         "twitter": "^1.7.1"
     },
     "devDependencies": {
